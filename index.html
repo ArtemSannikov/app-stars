@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Созвездия</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/themes/my-theme.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- Open sidebar (left panel) on swipe -->
+	<script type="text/javascript" src="js/swipe-panel.js"></script>
+	<!-- cordova js -->
+	<script src="cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#left-panel" data-role="button" data-icon="bars" data-iconpos="notext" data-shadow="false" data-transition="none" data-ajax="true" data-iconpos="right" class="ui-nodisc-icon transparentButton" style="margin-top: 2px;">Меню</a>
+		<h1>Созвездия</h1>
+	</div>
+
+	<!-- Выезжающая панель слева -->
+	<div data-role="panel" id="left-panel" data-display="overlay" data-position="left" data-position-fixed="true">
+
+		<ul data-role="listview">
+
+			<li data-icon="delete"><a href="#" data-rel="close" data-transition="none" data-ajax="false" >Закрыть панель</a></li>
+
+			<li data-icon="false"><a href="content/main/about.html" data-transition="none" data-ajax="false" >О приложении</a></li>
+
+			<li data-icon="false"><a href="content/main/contact.html" data-transition="none" data-ajax="false">Контактная информация</a></li>
+
+			<li data-icon="false"><a href="content/main/not-found-code.html" data-transition="none" data-ajax="false" >Нет нужного кода?</a></li>
+
+			<li data-icon="false"><a href="content/main/donate.html" data-transition="none" data-ajax="false">Поддержать проект</a></li>
+
+			<li data-icon="false"><a href="#PopupReviewApp" data-rel="popup" data-position-to="window" data-transition="none">Оставить отзыв</a></li>
+
+		</ul>	
+
+	</div>
+
+	<!-- Всплывающее окно: Оставить отзыв -->
+	<div data-role="popup" id="PopupReviewApp" data-overlay-theme="a" data-theme="a" data-dismissible="false">
+
+		<div data-role="header" data-theme="a">
+			<h1>Редирект</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<h3 class="ui-title">Переход на Play Market</h3>
+			<p>Сейчас вы будете перенаправлены на страницу приложения в Play Market, где сможете оставить отзыв о приложении.</p>
+			<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" data-rel="back">Отмена</a>
+			<a href="https://play.google.com/store/apps/details?id=ru.stars" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a" rel="external" data-transition="none">Перейти</a>
+		</div>
+
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<!-- Список с сайта https://geo.koltyrin.ru/sozvezdija.php -->
+		<ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Название созвездия">	
+			<li data-icon="false">
+				<a href="content/stars/item0.html" data-transition="none" data-ajax="false">
+					<h2>Андромеда</h2>
+					<p>Andromeda</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item1.html" data-transition="none" data-ajax="false">
+					<h2>Близнецы</h2>
+					<p>Gemini</p>
+				</a>
+			</li>
+			<li data-icon="false"><!---------------------------------- Ошибка: исправить фотографию на небе ---------------------------------->
+				<a href="content/stars/item2.html" data-transition="none" data-ajax="false">
+					<h2>Большая Медведица</h2>
+					<p>Ursa Major</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item3.html" data-transition="none" data-ajax="false">
+					<h2>Большой Пес</h2>
+					<p>Canis Major</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item4.html" data-transition="none" data-ajax="false">
+					<h2>Весы</h2>
+					<p>Libra</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item5.html" data-transition="none" data-ajax="false">
+					<h2>Водолей</h2>
+					<p>Aquarius</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item6.html" data-transition="none" data-ajax="false">
+					<h2>Возничий</h2>
+					<p>Auriga</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item7.html" data-transition="none" data-ajax="false">
+					<h2>Волк</h2>
+					<p>Lupus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item8.html" data-transition="none" data-ajax="false">
+					<h2>Волопас</h2>
+					<p>Bootes</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item9.html" data-transition="none" data-ajax="false">
+					<h2>Волосы Вероники</h2>
+					<p>Coma Berenices</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item10.html" data-transition="none" data-ajax="false">
+					<h2>Ворон</h2>
+					<p>Corvus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item11.html" data-transition="none" data-ajax="false">
+					<h2>Геркулес</h2>
+					<p>Hercules</p>
+				</a>
+			</li>
+			<!--<li data-icon="false">
+				<a href="content/stars/item12.html" data-transition="none" data-ajax="false">
+					<h2>Гидра</h2>
+					<p>Hydra</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item13.html" data-transition="none" data-ajax="false">
+					<h2>Голубь</h2>
+					<p>Columba</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item14.html" data-transition="none" data-ajax="false">
+					<h2>Гончие Псы</h2>
+					<p>Canes Venatici</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item15.html" data-transition="none" data-ajax="false">
+					<h2>Дева</h2>
+					<p>Virgo</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item16.html" data-transition="none" data-ajax="false">
+					<h2>Дельфин</h2>
+					<p>Delphinus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item17.html" data-transition="none" data-ajax="false">
+					<h2>Дракон</h2>
+					<p>Draco</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item18.html" data-transition="none" data-ajax="false">
+					<h2>Единорог</h2>
+					<p>Monoceros</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item19.html" data-transition="none" data-ajax="false">
+					<h2>Жертвенник</h2>
+					<p>Ara</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item20.html" data-transition="none" data-ajax="false">
+					<h2>Живописец</h2>
+					<p>Pictor</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item21.html" data-transition="none" data-ajax="false">
+					<h2>Жираф</h2>
+					<p>Camelopardalis</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item22.html" data-transition="none" data-ajax="false">
+					<h2>Журавль</h2>
+					<p>Grus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item23.html" data-transition="none" data-ajax="false">
+					<h2>Заяц</h2>
+					<p>Lepus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item24.html" data-transition="none" data-ajax="false">
+					<h2>Змееносец</h2>
+					<p>Ophiuchus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item25.html" data-transition="none" data-ajax="false">
+					<h2>Змея</h2>
+					<p>Serpens</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item26.html" data-transition="none" data-ajax="false">
+					<h2>Золотая Рыба</h2>
+					<p>Dorado</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item27.html" data-transition="none" data-ajax="false">
+					<h2>Индеец</h2>
+					<p>Indus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item28.html" data-transition="none" data-ajax="false">
+					<h2>Кассиопея</h2>
+					<p>Cassiopeia</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item29.html" data-transition="none" data-ajax="false">
+					<h2>Киль</h2>
+					<p>Carina</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item30.html" data-transition="none" data-ajax="false">
+					<h2>Кит</h2>
+					<p>Cetus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item31.html" data-transition="none" data-ajax="false">
+					<h2>Козерог</h2>
+					<p>Capricornus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item32.html" data-transition="none" data-ajax="false">
+					<h2>Компас</h2>
+					<p>Pyxis</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item33.html" data-transition="none" data-ajax="false">
+					<h2>Корма</h2>
+					<p>Puppis</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item34.html" data-transition="none" data-ajax="false">
+					<h2>Лебедь</h2>
+					<p>Cygnus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item35.html" data-transition="none" data-ajax="false">
+					<h2>Лев</h2>
+					<p>Leo</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item36.html" data-transition="none" data-ajax="false">
+					<h2>Летучая Рыба</h2>
+					<p>Volans</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item37.html" data-transition="none" data-ajax="false">
+					<h2>Лира</h2>
+					<p>Lyra</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item38.html" data-transition="none" data-ajax="false">
+					<h2>Лисичка</h2>
+					<p>Vulpecula</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item39.html" data-transition="none" data-ajax="false">
+					<h2>Малая Медведица</h2>
+					<p>Ursa Minor</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item40.html" data-transition="none" data-ajax="false">
+					<h2>Малый Конь</h2>
+					<p>Equuleus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item41.html" data-transition="none" data-ajax="false">
+					<h2>Малый Лев</h2>
+					<p>Leo Minor</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item42.html" data-transition="none" data-ajax="false">
+					<h2>Малый Пес</h2>
+					<p>Canis Minor</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item43.html" data-transition="none" data-ajax="false">
+					<h2>Микроскоп</h2>
+					<p>Microscopium</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item44.html" data-transition="none" data-ajax="false">
+					<h2>Муха</h2>
+					<p>Musca</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item45.html" data-transition="none" data-ajax="false">
+					<h2>Насос</h2>
+					<p>Antlia</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item46.html" data-transition="none" data-ajax="false">
+					<h2>Наугольник</h2>
+					<p>Norma</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item47.html" data-transition="none" data-ajax="false">
+					<h2>Овен</h2>
+					<p>Aries</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item48.html" data-transition="none" data-ajax="false">
+					<h2>Октант</h2>
+					<p>Octans</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item49.html" data-transition="none" data-ajax="false">
+					<h2>Орел</h2>
+					<p>Aquila</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item50.html" data-transition="none" data-ajax="false">
+					<h2>Орион</h2>
+					<p>Orion</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item51.html" data-transition="none" data-ajax="false">
+					<h2>Павлин</h2>
+					<p>Pavo</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item52.html" data-transition="none" data-ajax="false">
+					<h2>Паруса</h2>
+					<p>Vela</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item53.html" data-transition="none" data-ajax="false">
+					<h2>Пегас</h2>
+					<p>Pegasus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item54.html" data-transition="none" data-ajax="false">
+					<h2>Персей</h2>
+					<p>Perseus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item55.html" data-transition="none" data-ajax="false">
+					<h2>Печь</h2>
+					<p>Fornax</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item56.html" data-transition="none" data-ajax="false">
+					<h2>Райская Птица</h2>
+					<p>Apus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item57.html" data-transition="none" data-ajax="false">
+					<h2>Рак</h2>
+					<p>Cancer</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item58.html" data-transition="none" data-ajax="false">
+					<h2>Резец</h2>
+					<p>Caelum</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item59.html" data-transition="none" data-ajax="false">
+					<h2>Рыбы</h2>
+					<p>Pisces</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item60.html" data-transition="none" data-ajax="false">
+					<h2>Рысь</h2>
+					<p>Lynx</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item61.html" data-transition="none" data-ajax="false">
+					<h2>Северная Корона</h2>
+					<p>Corona Borealis</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item62.html" data-transition="none" data-ajax="false">
+					<h2>Секстант</h2>
+					<p>Sextans</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item63.html" data-transition="none" data-ajax="false">
+					<h2>Сетка</h2>
+					<p>Reticulum</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item64.html" data-transition="none" data-ajax="false">
+					<h2>Скорпион</h2>
+					<p>Scorpius</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item65.html" data-transition="none" data-ajax="false">
+					<h2>Скульптор</h2>
+					<p>Sculptor</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item66.html" data-transition="none" data-ajax="false">
+					<h2>Столовая Гора</h2>
+					<p>Mensa</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item67.html" data-transition="none" data-ajax="false">
+					<h2>Стрела</h2>
+					<p>Sagitta</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item68.html" data-transition="none" data-ajax="false">
+					<h2>Стрелец</h2>
+					<p>Sagittarius</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item69.html" data-transition="none" data-ajax="false">
+					<h2>Телескоп</h2>
+					<p>Telescopium</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item70.html" data-transition="none" data-ajax="false">
+					<h2>Телец</h2>
+					<p>Taurus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item71.html" data-transition="none" data-ajax="false">
+					<h2>Треугольник</h2>
+					<p>Triangulum</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item72.html" data-transition="none" data-ajax="false">
+					<h2>Тукан</h2>
+					<p>Tucana</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item73.html" data-transition="none" data-ajax="false">
+					<h2>Феникс</h2>
+					<p>Phoenix</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item74.html" data-transition="none" data-ajax="false">
+					<h2>Хамелеон</h2>
+					<p>Chamaeleon</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item75.html" data-transition="none" data-ajax="false">
+					<h2>Центавр</h2>
+					<p>Centaurus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item76.html" data-transition="none" data-ajax="false">
+					<h2>Цефей</h2>
+					<p>Cepheus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item77.html" data-transition="none" data-ajax="false">
+					<h2>Циркуль</h2>
+					<p>Circinus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item78.html" data-transition="none" data-ajax="false">
+					<h2>Часы</h2>
+					<p>Horologium</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item79.html" data-transition="none" data-ajax="false">
+					<h2>Чаша</h2>
+					<p>Crater</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item80.html" data-transition="none" data-ajax="false">
+					<h2>Щит</h2>
+					<p>Scutum</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item81html" data-transition="none" data-ajax="false">
+					<h2>Эридан</h2>
+					<p>Eridanus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item82.html" data-transition="none" data-ajax="false">
+					<h2>Южная Гидра</h2>
+					<p>Hydrus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item83.html" data-transition="none" data-ajax="false">
+					<h2>Южная Корона</h2>
+					<p>Corona Australis</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item84.html" data-transition="none" data-ajax="false">
+					<h2>Южная Рыба</h2>
+					<p>Piscis Austrinus</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item85.html" data-transition="none" data-ajax="false">
+					<h2>Южный Крест</h2>
+					<p>Crux</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item86.html" data-transition="none" data-ajax="false">
+					<h2>Южный Треугольник</h2>
+					<p>Triangulum Australe</p>
+				</a>
+			</li>
+			<li data-icon="false">
+				<a href="content/stars/item87.html" data-transition="none" data-ajax="false">
+					<h2>Ящерица</h2>
+					<p>Lacerta</p>
+				</a>
+			</li>-->
+		</ul>
+
+	</div>
+
+</div>
+
+</body>
+</html>
